@@ -8,10 +8,10 @@ import cv2
 data_shuffle = True
 
 #Path for the created .hdf5 file
-file_path = 'D:\\Courses\\NETProphets Internship\\dataset\\diya_or_notdiya.hdf5'  
+file_path = 'D:\\Courses\\Internship\\dataset\\diya_or_notdiya.hdf5'  
 
 #Original data path
-diya_or_notdiya_path = 'D:\\Courses\\NETProphets Internship\\f_images\\*.jpg'
+diya_or_notdiya_path = 'D:\\Courses\\Internship\\f_images\\*.jpg'
 
 #To get all the image paths 
 address = glob.glob(diya_or_notdiya_path)
