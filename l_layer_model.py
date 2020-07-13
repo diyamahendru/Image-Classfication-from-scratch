@@ -11,7 +11,7 @@ np.random.seed(1)
 train_x_orig, train_y, test_x_orig, test_y = load_data()
 
 index = 12
-plt.imshow(train_x_orig[index])
+#plt.imshow(train_x_orig[index])
 print ("y = " + str(train_y[0,index]))
 
 m_train = train_x_orig.shape[0]
@@ -38,12 +38,12 @@ test_x = test_x_flatten/255.
 print ("train_x's shape: " + str(train_x.shape))
 print ("test_x's shape: " + str(test_x.shape))
 
-#Four layer model
-layers_dims = [49152, 20, 7, 5, 1] #size of each layer
+#L layer model
+layers_dims = [49152, 40, 20, 10, 5, 1] #size of each layer
 
 #L_layer_model
 
-def L_layer_model(X, Y, layers_dims, learning_rate = 0.0075, num_iterations = 3000, print_cost=False):#lr was 0.009
+def l_layer_model(X, Y, layers_dims, learning_rate = 0.001, num_iterations = 1500, print_cost=False):#lr was 0.009
 
     np.random.seed(1)
     costs = []                         # keep track of cost
@@ -82,8 +82,7 @@ def L_layer_model(X, Y, layers_dims, learning_rate = 0.0075, num_iterations = 30
     
     return parameters
 
-parameters = L_layer_model(train_x, train_y, layers_dims, num_iterations = 2500, print_cost = True)
+parameters = l_layer_model(train_x, train_y, layers_dims, num_iterations = 1500, print_cost = True)
 
 predict_train_l = predict(train_x, train_y, parameters)
-predict_test_l = predict(test_x, test_y, parameters
-
+predict_test_l = predict(test_x, test_y, parameters)
